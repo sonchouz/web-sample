@@ -17,4 +17,11 @@ body.dark-theme{
 .header.dark-theme {
     background-color: black;
     color: white;
-        }
+ }
+ .pizza-card {
+    width: 400px;
+}
+.dark-theme .pizza-card {
+    background-color: black;
+    color: white;
+ }

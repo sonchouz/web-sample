@@ -33,7 +33,7 @@ async function loadPizzas() {
     pizzaList.innerHTML = ''; 
     pizzas.forEach(pizza => {
       const pizzaItem = document.createElement('div');
-      pizzaItem.className = "pizza-card p-8 bg-white justify-between min-h-[400px] flex flex-col"; 
+      pizzaItem.className = "pizza-card p-4 bg-white justify-between min-h-[270px] flex flex-col"; 
 
       pizzaItem.innerHTML = `
         <img src="${pizza.img}" alt="${pizza.name}" class="mx-auto mb-2 rounded-full w-30 h-30 object-cover"> 
@@ -42,7 +42,7 @@ async function loadPizzas() {
           <p class="text-gray-600 dark:text-gray-400">${pizza.description}</p>
           <p class="text-xl font-bold mt-2 text-gray-800">от 289 ₽</p>
         </div>
-        <button class="mt-4 bg-orange-600 text-white px-20 py-3 rounded-xl block mx-auto text-sm">Выбрать</button>
+        <button class="bg-orange-600 text-white px-20 py-3 rounded-xl block mx-auto text-sm">Выбрать</button>
       `;
       
       pizzaList.appendChild(pizzaItem);
@@ -55,7 +55,4 @@ async function loadPizzas() {
     pizzaList.innerHTML = '<p>Ошибка загрузки меню</p>';
   }
 }
-
-
-
 document.addEventListener('DOMContentLoaded', loadPizzas);
