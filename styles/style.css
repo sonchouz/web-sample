@@ -10,11 +10,11 @@ body.dark-theme{
     background-color: #000000;
     color: #ffffff;
 }
-.header.light-theme {
+header.light-theme {
     background-color: white;
     color: black;
 }
-.header.dark-theme {
+header.dark-theme {
     background-color: black;
     color: white;
  }

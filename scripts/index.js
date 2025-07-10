@@ -1,14 +1,17 @@
 const themeBtn = document.getElementById('themechanger');
 const body = document.body;
 const pizzaList = document.getElementById('pizza-list');
+const header = document.querySelector('header');
 const savedTheme = localStorage.getItem('theme') || 'light-theme';
 body.classList.add(savedTheme);
 
 
 function switchTheme() {
-  const newTheme = body.classList.contains('light-theme') ? 'dark-theme' : 'light-theme';
-  body.classList.remove('light-theme', 'dark-theme');
-  body.classList.add(newTheme);
+   const newTheme = body.classList.contains('light-theme') ? 'dark-theme' : 'light-theme';
+   body.classList.remove('light-theme', 'dark-theme');
+   header.classList.remove('light-theme', 'dark-theme');
+   body.classList.add(newTheme);
+   header.classList.add(newTheme);
   localStorage.setItem('theme', newTheme);
 }
 
